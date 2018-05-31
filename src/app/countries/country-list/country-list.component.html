@@ -1,5 +1,8 @@
 <div class="row">
   <div class="col-md-12" *ngFor="let country of countries.value">
-    {{country.CountryName}}
+    <div class="alert alert-success">
+        <button class="btn btn-info">{{country.CountryId}}</button>
+        - {{country.CountryName}}    
+    </div>
   </div>
 </div>
