@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { CountriesComponent } from './countries/countries.component';
 import { CountryComponent } from './countries/country/country.component';
 import { CountryListComponent } from './countries/country-list/country-list.component';
-import { CountryServiceService } from './services/country-service.service';
+import { CountryService } from './services/country.service';
+import { CountryObservableService } from './services/country-observable.service';
 
 
 
@@ -24,7 +25,7 @@ import { CountryServiceService } from './services/country-service.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [CountryServiceService],
+  providers: [CountryService,CountryObservableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
