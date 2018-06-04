@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Country} from '../shared/country';
+import { Observable } from 'rxjs/Observable';
+import { Http } from "@angular/http";
 
 @Injectable()
 export class CountryService {
