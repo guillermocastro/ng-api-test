@@ -10,6 +10,9 @@ import { CountryComponent } from './countries/country/country.component';
 import { CountryListComponent } from './countries/country-list/country-list.component';
 import { CountryService } from './services/country.service';
 import { CountryObservableService } from './services/country-observable.service';
+import { ResourcesComponent } from './resources/resources.component';
+import { ResourceListComponent } from './resources/resource-list/resource-list.component';
+import { ResourceService } from './services/resource.service';
 
 
 
@@ -19,13 +22,15 @@ import { CountryObservableService } from './services/country-observable.service'
     CountriesComponent,
     CountryComponent,
     CountryListComponent,
+    ResourcesComponent,
+    ResourceListComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [CountryService,CountryObservableService],
+  providers: [CountryService,ResourceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
