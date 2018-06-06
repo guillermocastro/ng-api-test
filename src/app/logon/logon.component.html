@@ -1,0 +1,30 @@
+<div style="background-color:darkgray;font-size:0.8em;" ng-controller="Authentication" ng-init="UserName=null">
+    <div class="nav" ng-show="logonstatus===null">
+        <button ng-click="logonstatus='signin';" >Sign in</button>
+        <button ng-click="logonstatus='register';">Register</button>
+        <label>{{UserName}}</label>
+    </div>
+    <div class="nav" ng-show="logonstatus==='signin'">
+        <label>User name</label>
+        <input ng-model="UserName" id="UserName2" type="text" required placeholder="User name" />
+        <label>Password</label>
+        <input ng-model="Password" id="Password" type="password" placeholder="Password" />
+        <button ng-click="login(UserName,Password);">Login</button>
+        <button ng-click="logonstatus=null;">Cancel</button>
+    </div>
+    <div class="nav" ng-show="logonstatus==='register'">
+        <label>User name</label>
+        <input ng-model="UserName" type="text" required placeholder="User name" />
+        <label>Password</label>
+        <input ng-model="Password1" ng-show="logonstatus==='register'" type="password" placeholder="Password" />
+        <label>Confirm password</label>
+        <input ng-model="Password2" type="password" placeholder="Confirm password" />
+        <button ng-click="register(UserName,Password1,Password2);">Register</button>
+        <button ng-click="logonstatus=null;">Cancel</button>
+    </div>
+    <div class="nav" ng-show="logonstatus==='connected'">
+        <button ng-click="signoff();">Sign off</button> 
+        <label>{{UserName}}</label>
+    </div>
+</div>
+
